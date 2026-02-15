@@ -2,8 +2,8 @@ name: Deploy to TimeWeb Cloud
 
 on:
   push:
-    branches: [ main ]
-  workflow_dispatch:
+    branches: [ main ]  # Деплой только из main
+  workflow_dispatch:    # Ручной запуск
 
 jobs:
   deploy:
@@ -37,6 +37,11 @@ jobs:
           # Сборка и запуск контейнеров
           echo "🔨 Building and starting containers..."
           docker-compose up -d --build
+          
+          # Установка прав на директории
+          echo "🔐 Setting permissions..."
+          docker exec natalispravosite_php_1 chown -R www-data:www-data /var/www/html/var /var/www/html/vendor
+          docker exec natalispravosite_php_1 chmod -R 775 /var/www/html/var
           
           # Проверка статуса
           echo "✅ Checking container status..."
