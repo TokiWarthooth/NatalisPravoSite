@@ -2,53 +2,16 @@ name: Deploy to TimeWeb Cloud
 
 on:
   push:
-    branches: [ main ]  # Деплой только из main
-  workflow_dispatch:    # Ручной запуск
+    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-    
-    - name: Deploy to server via SSH
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.SERVER_HOST }}
-        username: ${{ secrets.SERVER_USER }}
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
-        port: 22
-        script: |
-          echo "🚀 Starting deployment..."
-          
-          # Переход в директорию проекта
-          cd ${{ secrets.SERVER_PATH }}
-          
-          # Получение последних изменений
-          echo "📥 Pulling latest changes from GitHub..."
-          git pull origin main
-          
-          # Остановка контейнеров
-          echo "🛑 Stopping containers..."
-          docker-compose -f docker-compose.prod.yml down
-          
-          # Сборка и запуск контейнеров
-          echo "🔨 Building and starting containers..."
-          docker-compose -f docker-compose.prod.yml up -d --build
-          
-          # Установка прав на директории
-          echo "🔐 Setting permissions..."
-          docker exec natalispravosite_php_1 chown -R www-data:www-data /var/www/html/var /var/www/html/vendor
-          docker exec natalispravosite_php_1 chmod -R 775 /var/www/html/var
-          
-          # Проверка статуса
-          echo "✅ Checking container status..."
-          docker-compose -f docker-compose.prod.yml ps
-          
-          # Очистка неиспользуемых образов
-          echo "🧹 Cleaning up unused images..."
-          docker system prune -f
-          
-          echo "✨ Deployment completed successfully!"
+    - name: Trigger deployment webhook
+      run: |
+        curl -X POST http://194.87.200.201:9000/deploy \
+          -H "Content-Type: application/json" \
+          -d '{"ref": "refs/heads/main", "repository": "NatalisPravoSite"}'
