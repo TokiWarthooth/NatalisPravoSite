@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container py-5">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <h1 class="mb-4">Портфолио</h1>
+            <p class="lead">Примеры наших успешных проектов и решений.</p>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Интернет-магазин</h5>
+                    <p class="card-text">Полнофункциональный интернет-магазин с системой оплаты и управления заказами.</p>
+                    <span class="badge bg-primary">E-commerce</span>
+                    <span class="badge bg-secondary">PHP</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">CRM Система</h5>
+                    <p class="card-text">Система управления взаимоотношениями с клиентами для среднего бизнеса.</p>
+                    <span class="badge bg-success">CRM</span>
+                    <span class="badge bg-secondary">Symfony</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">API Платформа</h5>
+                    <p class="card-text">Высоконагруженная API платформа для обработки финансовых транзакций.</p>
+                    <span class="badge bg-warning">API</span>
+                    <span class="badge bg-secondary">PostgreSQL</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row mt-4">
+        <div class="col-lg-8 mx-auto text-center">
+            <h3>Хотите увидеть больше?</h3>
+            <p>Свяжитесь с нами, чтобы обсудить ваш проект и посмотреть дополнительные примеры наших работ.</p>
+            <a href="{{ path('contact') }}" class="btn btn-primary">Связаться с нами</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

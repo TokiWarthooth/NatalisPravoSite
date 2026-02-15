@@ -1,0 +1,40 @@
+{
+    "name": "simple-site/symfony-app",
+    "type": "project",
+    "license": "MIT",
+    "require": {
+        "php": ">=8.3",
+        "symfony/console": "^7.0",
+        "symfony/dotenv": "^7.0",
+        "symfony/framework-bundle": "^7.0",
+        "symfony/yaml": "^7.0",
+        "symfony/twig-bundle": "^7.0",
+        "symfony/maker-bundle": "^1.52"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [],
+        "post-update-cmd": []
+    },
+    "conflict": {
+        "symfony/symfony": "*"
+    },
+    "config": {
+        "allow-plugins": {}
+    },
+    "extra": {
+        "symfony": {
+            "allow-contrib": false,
+            "require": "7.0.*"
+        }
+    }
+}

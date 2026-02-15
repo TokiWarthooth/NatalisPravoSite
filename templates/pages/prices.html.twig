@@ -1,0 +1,238 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container py-5">
+    <div class="row">
+        <div class="col-lg-8 mx-auto text-center mb-5">
+            <h1 class="text-primary-custom mb-4">Прайс-лист</h1>
+            <p class="lead text-muted">Стоимость юридических услуг</p>
+            <p class="text-muted">Цены указаны в рублях. Окончательная стоимость определяется после изучения конкретной ситуации.</p>
+        </div>
+    </div>
+    
+    <div class="row g-4">
+        <!-- Консультации -->
+        <div class="col-lg-6 mb-4">
+            <div class="card h-100">
+                <div class="card-header bg-primary-custom text-white">
+                    <h4 class="mb-0"><i class="bi bi-chat-dots me-2"></i>Консультации</h4>
+                </div>
+                <div class="card-body">
+                    <div class="price-item d-flex justify-content-between align-items-center py-2 border-bottom">
+                        <span>Устная консультация (до 1 часа)</span>
+                        <strong class="text-primary-custom">5 000 ₽</strong>
+                    </div>
+                    <div class="price-item d-flex justify-content-between align-items-center py-2 border-bottom">
+                        <span>Письменная консультация</span>
+                        <strong class="text-primary-custom">7 000 ₽</strong>
+                    </div>
+                    <div class="price-item d-flex justify-content-between align-items-center py-2 border-bottom">
+                        <span>Онлайн-консультация (видеосвязь)</span>
+                        <strong class="text-primary-custom">4 000 ₽</strong>
+                    </div>
+                    <div class="price-item d-flex justify-content-between align-items-center py-2 border-bottom">
+                        <span>Срочная консультация</span>
+                        <strong class="text-primary-custom">8 000 ₽</strong>
+                    </div>
+                    <div class="price-item d-flex justify-content-between align-items-center py-2">
+                        <span>Правовая экспертиза документа</span>
+                        <strong class="text-primary-custom">от 5 000 ₽</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Авторское право -->
+        <div class="col-lg-6 mb-4">
+            <div class="card h-100">
+                <div class="card-header bg-primary-custom text-white">
+                    <h4 class="mb-0"><i class="bi bi-shield-check me-2"></i>Авторское право</h4>
+                </div>
+                <div class="card-body">
+                    <div class="price-item d-flex justify-content-between align-items-center py-2 border-bottom">
+                        <span>Регистрация авторских прав</span>
+                        <strong class="text-primary-custom">от 15 000 ₽</strong>
+                    </div>
+                    <div class="price-item d-flex justify-content-between align-items-center py-2 border-bottom">
+                        <span>Защита авторских прав (досудебная)</span>
+                        <strong class="text-primary-custom">от 25 000 ₽</strong>
+                    </div>
+                    <div class="price-item d-flex justify-content-between align-items-center py-2 border-bottom">
+                        <span>Судебная защита авторских прав</span>
+                        <strong class="text-primary-custom">от 50 000 ₽</strong>
+                    </div>
+                    <div class="price-item d-flex justify-content-between align-items-center py-2 border-bottom">
+                        <span>Сопровождение онлайн-школы (месяц)</span>
+                        <strong class="text-primary-custom">от 30 000 ₽</strong>
+                    </div>
+                    <div class="price-item d-flex justify-content-between align-items-center py-2">
+                        <span>Регистрация товарного знака</span>
+                        <strong class="text-primary-custom">от 40 000 ₽</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- IT-право -->
+        <div class="col-lg-6 mb-4">
+            <div class="card h-100">
+                <div class="card-header bg-primary-custom text-white">
+                    <h4 class="mb-0"><i class="bi bi-laptop me-2"></i>IT-право</h4>
+                </div>
+                <div class="card-body">
+                    <div class="price-item d-flex justify-content-between align-items-center py-2 border-bottom">
+                        <span>Регистрация программы для ЭВМ</span>
+                        <strong class="text-primary-custom">от 20 000 ₽</strong>
+                    </div>
+                    <div class="price-item d-flex justify-content-between align-items-center py-2 border-bottom">
+                        <span>Пользовательское соглашение</span>
+                        <strong class="text-primary-custom">от 15 000 ₽</strong>
+                    </div>
+                    <div class="price-item d-flex justify-content-between align-items-center py-2 border-bottom">
+                        <span>Политика конфиденциальности</span>
+                        <strong class="text-primary-custom">от 12 000 ₽</strong>
+                    </div>
+                    <div class="price-item d-flex justify-content-between align-items-center py-2 border-bottom">
+                        <span>Лицензионный договор на ПО</span>
+                        <strong class="text-primary-custom">от 18 000 ₽</strong>
+                    </div>
+                    <div class="price-item d-flex justify-content-between align-items-center py-2">
+                        <span>Комплексное сопровождение IT-проекта</span>
+                        <strong class="text-primary-custom">от 50 000 ₽</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Земельное право -->
+        <div class="col-lg-6 mb-4">
+            <div class="card h-100">
+                <div class="card-header bg-primary-custom text-white">
+                    <h4 class="mb-0"><i class="bi bi-tree me-2"></i>Земельное право</h4>
+                </div>
+                <div class="card-body">
+                    <div class="price-item d-flex justify-content-between align-items-center py-2 border-bottom">
+                        <span>Сопровождение сделки с землей</span>
+                        <strong class="text-primary-custom">от 35 000 ₽</strong>
+                    </div>
+                    <div class="price-item d-flex justify-content-between align-items-center py-2 border-bottom">
+                        <span>Споры о границах участков</span>
+                        <strong class="text-primary-custom">от 40 000 ₽</strong>
+                    </div>
+                    <div class="price-item d-flex justify-content-between align-items-center py-2 border-bottom">
+                        <span>Оформление прав на землю</span>
+                        <strong class="text-primary-custom">от 25 000 ₽</strong>
+                    </div>
+                    <div class="price-item d-flex justify-content-between align-items-center py-2 border-bottom">
+                        <span>Перевод земель в другую категорию</span>
+                        <strong class="text-primary-custom">от 50 000 ₽</strong>
+                    </div>
+                    <div class="price-item d-flex justify-content-between align-items-center py-2">
+                        <span>Земельные споры с госорганами</span>
+                        <strong class="text-primary-custom">от 45 000 ₽</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Медицинское право -->
+        <div class="col-lg-6 mb-4">
+            <div class="card h-100">
+                <div class="card-header bg-primary-custom text-white">
+                    <h4 class="mb-0"><i class="bi bi-heart-pulse me-2"></i>Медицинское право</h4>
+                </div>
+                <div class="card-body">
+                    <div class="price-item d-flex justify-content-between align-items-center py-2 border-bottom">
+                        <span>Сопровождение медицинской клиники (месяц)</span>
+                        <strong class="text-primary-custom">от 40 000 ₽</strong>
+                    </div>
+                    <div class="price-item d-flex justify-content-between align-items-center py-2 border-bottom">
+                        <span>Договоры на медицинские услуги</span>
+                        <strong class="text-primary-custom">от 10 000 ₽</strong>
+                    </div>
+                    <div class="price-item d-flex justify-content-between align-items-center py-2 border-bottom">
+                        <span>Помощь в получении лицензии</span>
+                        <strong class="text-primary-custom">от 60 000 ₽</strong>
+                    </div>
+                    <div class="price-item d-flex justify-content-between align-items-center py-2 border-bottom">
+                        <span>Защита интересов медорганизации</span>
+                        <strong class="text-primary-custom">от 35 000 ₽</strong>
+                    </div>
+                    <div class="price-item d-flex justify-content-between align-items-center py-2">
+                        <span>Разрешение споров с пациентами</span>
+                        <strong class="text-primary-custom">от 30 000 ₽</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Документооборот -->
+        <div class="col-lg-6 mb-4">
+            <div class="card h-100">
+                <div class="card-header bg-primary-custom text-white">
+                    <h4 class="mb-0"><i class="bi bi-file-earmark-text me-2"></i>Документооборот</h4>
+                </div>
+                <div class="card-body">
+                    <div class="price-item d-flex justify-content-between align-items-center py-2 border-bottom">
+                        <span>Исковое заявление</span>
+                        <strong class="text-primary-custom">от 8 000 ₽</strong>
+                    </div>
+                    <div class="price-item d-flex justify-content-between align-items-center py-2 border-bottom">
+                        <span>Жалоба/возражение</span>
+                        <strong class="text-primary-custom">от 5 000 ₽</strong>
+                    </div>
+                    <div class="price-item d-flex justify-content-between align-items-center py-2 border-bottom">
+                        <span>Претензия</span>
+                        <strong class="text-primary-custom">от 4 000 ₽</strong>
+                    </div>
+                    <div class="price-item d-flex justify-content-between align-items-center py-2 border-bottom">
+                        <span>Доверенность</span>
+                        <strong class="text-primary-custom">2 000 ₽</strong>
+                    </div>
+                    <div class="price-item d-flex justify-content-between align-items-center py-2">
+                        <span>Договор (любой сложности)</span>
+                        <strong class="text-primary-custom">от 7 000 ₽</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row mt-5">
+        <div class="col-lg-8 mx-auto">
+            <div class="alert alert-info">
+                <h5 class="alert-heading"><i class="bi bi-info-circle me-2"></i>Важная информация</h5>
+                <ul class="mb-0">
+                    <li>Цены указаны за стандартные случаи. Сложные дела оцениваются индивидуально.</li>
+                    <li>Первичная консультация (15 минут) - бесплатно.</li>
+                    <li>Возможна рассрочка платежа по договоренности.</li>
+                    <li><strong>Работаю дистанционно по всей России</strong> - онлайн-консультации, подготовка документов, представительство в судах.</li>
+                    <li>Оплата производится по факту оказания услуг или поэтапно.</li>
+                </ul>
+            </div>
+            
+            <div class="alert alert-success">
+                <h5 class="alert-heading"><i class="bi bi-globe me-2"></i>Дистанционное обслуживание</h5>
+                <p class="mb-0">Оказываю юридические услуги удаленно для клиентов из любого региона России. Все консультации, подготовка документов и сопровождение дел могут осуществляться онлайн через видеосвязь, электронную почту и мессенджеры.</p>
+            </div>
+            
+            <div class="text-center mt-4">
+                <h4 class="text-primary-custom mb-3">Готовы обсудить ваше дело?</h4>
+                <p class="mb-4">Свяжитесь со мной для получения точной оценки стоимости услуг</p>
+                <a href="{{ path('contact') }}" class="btn btn-primary-custom btn-lg">
+                    <i class="bi bi-telephone me-2"></i>Связаться со мной
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+.bg-primary-custom {
+    background-color: #1e3c72 !important;
+}
+.price-item:last-child {
+    border-bottom: none !important;
+}
+</style>
+{% endblock %}

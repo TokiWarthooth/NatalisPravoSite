@@ -1,0 +1,113 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="container py-5">
+    <div class="row">
+        <div class="col-lg-8 mx-auto">
+            <div class="text-center mb-5">
+                <h1 class="text-primary-custom mb-4">О юристе</h1>
+                <!--<p class="lead text-muted">Скрипникова Наталья - опытный юрист с многолетней практикой</p>-->
+            </div>
+            
+            <div class="row align-items-center mb-5">
+                <div class="col-md-5 text-center mb-4 mb-md-0">
+                    <!-- Фото юриста -->
+                    <div class="photo-container mx-auto" style="max-width: 350px;">
+                        <img src="/images/Natalia_portret.jpeg" alt="Скрипникова Наталья - Юрист" 
+                             class="rounded img-fluid w-100" 
+                             style="object-fit: cover; border: 2px solid #e9ecef; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <h3 class="text-primary-custom mb-3">Скрипникова Наталья</h3>
+                    <p class="mb-3">Практикующий юрист с более чем 10-летним опытом работы в области корпоративного, авторского, земельного и медицинского права.</p>
+                    <p class="mb-3">Специализируюсь на защите интеллектуальной собственности онлайн-школ, IT-праве и правовом сопровождении цифровых проектов. Помогаю юридическим и физическим лицам в судах различных инстанций, а также на досудебном урегулировании споров.</p>
+                    <div class="row">
+                        <!--<div class="col-sm-6">
+                            <p class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Высшее юридическое образование</p>
+                            <p class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Член Адвокатской палаты</p>
+                        </div>-->
+                        <div class="col-sm-6">
+                            <p class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Опыт работы 10+ лет</p>
+                            <p class="mb-2"><i class="bi bi-check-circle text-success me-2"></i>Более 500 выигранных дел</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4 mb-5">
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary-custom">
+                                <i class="bi bi-mortarboard me-2"></i>Образование
+                            </h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">• Московский институт права (МИП)</li>
+                                <li class="mb-2">• Специальность: Юриспруденция</li>
+                                <li class="mb-2">• Квалификация: Юрист</li>
+                                <li class="mb-2">• Регулярное повышение квалификации</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title text-primary-custom">
+                                <i class="bi bi-trophy me-2"></i>Специализация
+                            </h5>
+                            <ul class="list-unstyled">
+                                <li class="mb-2">• <strong>Авторское право</strong> - защита интеллектуальной собственности онлайн-школ</li>
+                                <li class="mb-2">• <strong>IT-право</strong> - сопровождение программ, ботов, пользовательских соглашений</li>
+                                <li class="mb-2">• <strong>Земельное право</strong> - споры и сделки с земельными участками</li>
+                                <li class="mb-2">• <strong>Медицинское право</strong> - решение споров в медицинской сфере</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-light p-4 rounded mb-4">
+                <h4 class="text-primary-custom mb-3">
+                    <i class="bi bi-lightbulb me-2"></i>Приоритетное направление
+                </h4>
+                <p class="mb-3">Особое внимание уделяю <strong>авторскому праву в сфере онлайн-образования</strong>. В моей практике успешно реализованы проекты по защите интеллектуальной собственности онлайн-школ, курсов и образовательных платформ.</p>
+                <p class="mb-3">Помогаю онлайн-школам:</p>
+                <ul class="mb-3">
+                    <li>Защитить авторские права на образовательный контент</li>
+                    <li>Составить договоры с преподавателями и партнерами</li>
+                    <li>Разработать оферты, пользовательские соглашения, политики конфиденциальности</li>
+                    <li>Урегулировать споры о нарушении авторских прав</li>
+                    <li>Зарегистрировать товарные знаки и бренды</li>
+                </ul>
+                <p class="mb-0"><em>Имею успешный опыт ведения дел для онлайн-школ различного масштаба - от стартапов до крупных образовательных платформ.</em></p>
+            </div>
+            
+            <div class="bg-light p-4 rounded mb-4">
+                <h4 class="text-primary-custom mb-3">
+                    <i class="bi bi-laptop me-2"></i>IT-право и цифровые технологии
+                </h4>
+                <p class="mb-3">Специализируюсь на правовом сопровождении IT-проектов:</p>
+                <ul class="mb-3">
+                    <li><strong>Программное обеспечение</strong> - регистрация прав, лицензионные договоры</li>
+                    <li><strong>Telegram-боты и чат-боты</strong> - правовая защита, пользовательские соглашения</li>
+                    <!--<li><strong>Мобильные приложения</strong> - разработка Terms of Use, Privacy Policy</li>-->
+                    <!--<li><strong>Веб-сервисы и платформы</strong> - договоры с пользователями, GDPR-compliance</li>-->
+                    <li><strong>Защита от пиратства</strong> - борьба с незаконным использованием ПО</li>
+                </ul>
+                <p class="mb-0">Понимаю специфику IT-индустрии и говорю на одном языке с разработчиками и предпринимателями в сфере технологий.</p>
+            </div>
+
+            <div class="bg-light p-4 rounded">
+                <h4 class="text-primary-custom mb-3">
+                    <i class="bi bi-briefcase me-2"></i>Мой подход к работе
+                </h4>
+                <p class="mb-3">Каждое дело для меня уникально. Я внимательно изучаю все обстоятельства, анализирую правовые аспекты и разрабатываю индивидуальную стратегию защиты интересов клиента.</p>
+                <p class="mb-3">Считаю важным поддерживать постоянную связь с клиентами, информировать их о ходе дела и объяснять все юридические нюансы доступным языком.</p>
+                <p class="mb-0">Моя цель - помочь выйти из спора с минимальными потерями и максимальным результатом, найти оптимальное решение, которое защитит права и интересы моих клиентов.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
