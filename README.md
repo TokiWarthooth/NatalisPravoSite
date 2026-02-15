@@ -41,14 +41,24 @@
 git clone https://github.com/TokiWarthooth/NatalisPravoSite.git
 cd NatalisPravoSite
 
-# Запуск контейнеров
+# Запуск контейнеров (dev окружение)
 docker-compose up -d
 
+# Или явно указать dev конфиг
+docker-compose -f docker-compose.dev.yml up -d
+
 # Установка зависимостей (первый запуск)
-docker exec -it natalispravo-php-1 composer install
+docker exec -it natalispravosite_php_1 composer install
 
 # Сайт доступен по адресу
 # http://localhost:8080
+```
+
+### Запуск в продакшн режиме
+
+```bash
+# Запуск с prod конфигурацией
+docker-compose -f docker-compose.prod.yml up -d
 ```
 
 ### Полезные команды

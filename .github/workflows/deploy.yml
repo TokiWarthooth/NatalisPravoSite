@@ -32,11 +32,11 @@ jobs:
           
           # Остановка контейнеров
           echo "🛑 Stopping containers..."
-          docker-compose down
+          docker-compose -f docker-compose.prod.yml down
           
           # Сборка и запуск контейнеров
           echo "🔨 Building and starting containers..."
-          docker-compose up -d --build
+          docker-compose -f docker-compose.prod.yml up -d --build
           
           # Установка прав на директории
           echo "🔐 Setting permissions..."
@@ -45,7 +45,7 @@ jobs:
           
           # Проверка статуса
           echo "✅ Checking container status..."
-          docker-compose ps
+          docker-compose -f docker-compose.prod.yml ps
           
           # Очистка неиспользуемых образов
           echo "🧹 Cleaning up unused images..."
