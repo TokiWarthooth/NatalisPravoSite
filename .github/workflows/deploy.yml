@@ -1,0 +1,49 @@
+name: Deploy to TimeWeb Cloud
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Deploy to server via SSH
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.SERVER_HOST }}
+        username: ${{ secrets.SERVER_USER }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        port: 22
+        script: |
+          echo "🚀 Starting deployment..."
+          
+          # Переход в директорию проекта
+          cd ${{ secrets.SERVER_PATH }}
+          
+          # Получение последних изменений
+          echo "📥 Pulling latest changes from GitHub..."
+          git pull origin main
+          
+          # Остановка контейнеров
+          echo "🛑 Stopping containers..."
+          docker-compose down
+          
+          # Сборка и запуск контейнеров
+          echo "🔨 Building and starting containers..."
+          docker-compose up -d --build
+          
+          # Проверка статуса
+          echo "✅ Checking container status..."
+          docker-compose ps
+          
+          # Очистка неиспользуемых образов
+          echo "🧹 Cleaning up unused images..."
+          docker system prune -f
+          
+          echo "✨ Deployment completed successfully!"
